@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>NodeJsMediaCentre</title>
+<!-- <script src="jquery.min.js"></script> UNCOMMENT IF USING A LOCALLY HOSTED JQUERY FROM THE STATIC DIRECTORY-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="app.js"></script>
+<script>
+$( document ).ready(function() {
+    loadRoot();
+    keyListener();
+});
+</script>
+<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+<div id="status" class="status">
+  <table border="0">
+    <tr><td onclick="pause()">Pause</td><td onclick="stop()">Stop</td><td><p id="last-key">Last Key:</p></td><td><p id="loading"></p></td></tr>
+  </table>
+</div>
+<div id="wrapper">
+  <div id="left"><ul id="show" /></div>
+  <div id="middle"><ul id="series" /></div>
+  <div id="right"><ul id="episode" /></div>
+</div>
+</body>
+</html>
